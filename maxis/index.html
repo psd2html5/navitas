@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content = "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name = "viewport" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Axis</title>
+<link rel="stylesheet" href="style.css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script>
+   window.addEventListener("load", function(){
+       if(document.height <= window.outerHeight)
+       {
+           document.body.style.height = (window.outerHeight + 50) + 'px';
+           setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+       }
+       else
+       {
+           setTimeout( function(){ window.scrollTo(0, 1); }, 0 );
+       }
+   }
+   );
+ </script>
+<script type="text/javascript">
+
+
+$(document).ready(function(e) {
+$("#pulldown-icon").click(function(e){
+  
+ $("#logo").hide();
+ $("#content").hide();
+ $("#footer-links").hide();
+ $("#icons-list").slideDown("slow");
+ $("#pulldown-icon").hide();
+ $("#pullup-icon").show();
+  
+  
+});
+  
+  
+ $("#pullup-icon").click(function(e){
+	
+	 $("#pullup-icon").hide();
+	 $("#logo").show();	 
+	 $("#footer-links").show();
+	 $("#icons-list").slideUp("slow", function(){
+		 
+		  $("#content").show();
+		 });
+	
+	 $("#pulldown-icon").show();
+  
+ });
+  
+});
+
+
+
+</script>
+</head>
+
+<body>
+<div id="outer-container">
+<header class="fixit">
+<div id="logo" class="fleft">
+
+<img src="images/logo.png" width="67" height="31" alt="logo"/>
+</div>
+<div id="pulldown-icon" class="fleft"></div>
+
+
+
+<div id="icons-list" class="fixit">
+<nav id="primary">
+
+<ul>
+<li><a href="#"><img src="images/logout.png" width="42" height="42" /></a></li>
+<li><a href="#"><img src="images/comments.png" width="53" height="53" /></a></li>
+<li><a href="#"><img src="images/search.png" width="51" height="47" /></a></li>
+<li><a href="#"><img src="images/help.png" width="48" height="52" /></a></li>
+</ul>
+</nav>
+
+<div id="pullup-icon"></div>
+
+</div>
+
+
+
+
+</header>
+
+
+<div id="content" class="fixit">
+<a href="#"><div class="icon green fleft"><div class="text">Mail</div><div class="mail"></div></div></a>
+<a href="#"><div class="icon green fleft"><div class="text">Campus</div><div class="campus"></div></div></a>
+<a href="#"><div class="icon green fleft"><div class="text">Calendar</div><div class="calendar"></div></div></a>
+<a href="#"><div class="icon green fleft"><div class="text">Transport</div><div class="transport"></div></div></a>
+<a href="#"><div class="icon violet fleft"><div class="text">Food</div><div class="food"></div></div></a>
+<a href="#"><div class="icon orange fleft"><div class="text">Lectures</div><div class="lectures"></div></div></a>
+<a href="#"><div class="icon orange fleft"><div class="text">Parking</div><div class="parking"></div></div></a>
+<a href="#"><div class="icon green fleft"><div class="text">Profile</div><div class="profile"></div></div></a>
+<a href="#"><div class="icon violet fleft"><div class="text">Units</div><div class="units"></div></div></a>
+<a href="#"><div class="icon orange fleft"><div class="text">Library</div><div class="library"></div></div></a>
+<a href="#"><div class="icon green fleft"><div class="text">Books</div><div class="books"></div></div></a>
+<a href="#"><div class="icon violet fleft"><div class="text">Forms</div><div class="forms"></div></div></a>
+<a href="#"><div class="icon orange fleft"><div class="text">Enrollment</div><div class="enrollment"></div></div></a>
+<a href="#"><div class="icon green fleft"><div class="text">Study plan</div><div class="studyplan"></div></div></a>
+<a href="#"><div class="icon violet fleft"><div class="text">Find staff</div><div class="findstaff"></div></div></a>
+<a href="#"><div class="icon orange fleft"><div class="text">Tracker</div><div class="tracker"></div></div></a>
+</div>
+
+<footer>
+
+<nav id="footer-links" class="fixit">
+<a href="index.html" ><div class="icon f fleft active"><div class="home"></div><div class="center">Home</div></div></a>
+<a href="study.html"><div class="icon f fleft"><div class="study"></div><div class="center">Study</div></div></a>
+<a href="#"><div class="icon f fleft"><div class="around"></div><div class="center">Around</div></div></a>
+<a href="#"><div class="icon f fleft"><div class="apps"></div><div class="center">Apps</div></div></a>
+
+</nav>
+</footer>
+
+
+</div>
+</body>
+</html>
